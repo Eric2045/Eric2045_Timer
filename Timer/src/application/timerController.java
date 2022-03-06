@@ -22,7 +22,7 @@ import javafx.scene.text.Text;
 import javafx.util.Duration;
 
 /**
- * Deze class betreft de controller van de applicatie, deze class verbonden met de Scene Builder tool via de 
+ * Deze class betreft de controller van de applicatie, deze class is verbonden met de Scene Builder tool via de 
  * controller menu in de Scene Builder.
  * De objecten die gemaakt worden in de Scene Builder tool (AnchorPane, GridPane, Button...et cetera) 
  * worden van de Scene Builder gekopieerd via (menu -> view -> Show Sample Controller Skeleton) en hier geplakt voor bewerking.
@@ -134,7 +134,7 @@ public class timerController extends Thread implements Initializable{
 	  * (wit begint altijd)
 	  * setOutput wordt aangeroepen die methode secondsToHms aanroept die berekent de uren, minuten en secondes en zet die in een LinkedList,
 	  * via setText(numberMap.get(currHmsWhite.get(0) wordt bijvoorbeeld het uur opgehaald en getoond op de applicatie,
-	  * er wordt één seconde 'gewacht' met WhiteThread.sleep(1000) en de secondes voor White worden telkens
+	  * er wordt Ã©Ã©n seconde 'gewacht' met WhiteThread.sleep(1000) en de secondes voor White worden telkens
 	  * met 1 verlaagd, als het op 0 komt dan is de tijd voorbij en het hooftmenu wordt weer getoond via scrollDown(),
 	  * met setDisable(true) en setFocusTraversable(false) wordt de KeyEvent voor deze speler uitgeschakeld zodat deze niet meer 
 	  * op SPACE kan drukken, want dan zou de overgebleven tijd van de andere speler op de achtergrond weer gaan lopen.
@@ -215,7 +215,7 @@ public class timerController extends Thread implements Initializable{
 	  * wordt aangeroepen om zo de boolean flag pauseWhite op false te zetten zodat de while loop van de white thread 'pauzeer', continueTB() zorgt dat 
 	  * de boolean flag pauseBlack dan op true wordt gezet zodat de while loop van Black kan beginnen of verder gaan met de tijd dat is opgeslagen 
 	  * in de LinkedList currHmsBlack. via wClockPane.setDisable(true) en setFocusTraversable(false) wordt de Focus (controle) van White weggehaald
-	  * en weer aan Black gegeven, dit omdat slechts één component tegelijk in het venstersysteem de keyboardfocus kan hebben. 
+	  * en weer aan Black gegeven, dit omdat slechts Ã©Ã©n component tegelijk in het venstersysteem de keyboardfocus kan hebben. 
 	  * de BlackThread wordt dan gestart met nBt.start(). Als op C gedrukt wordt gaat eerst de flag pauseWhite met pauseW() op false, dit is nodig 
 	  * anders blijft de while loop lopen tot dat de timer op 0 is, de Node wordt ook disable en setFocusTraversable gaat op false, 
 	  * dit om te voorkomen dat wanneer de C key is gedrukt en we zitten in het hoofdmenu, dat er niet meer op de SPACE toets gedrukt kan worden 
@@ -318,8 +318,8 @@ public class timerController extends Thread implements Initializable{
 	 
 	 
 	 /**
-	  * Deze methode berekent en retourneert in een LinkedList telkens weer de totale tijd die nog over is terwijl de while loop in één van de inner classes loopt
-	  * en currSecondsWhite of currSecondsBlack wordt telkens met één seconde verlaagd bij elke iteratie.
+	  * Deze methode berekent en retourneert in een LinkedList telkens weer de totale tijd die nog over is terwijl de while loop in Ã©Ã©n van de inner classes loopt
+	  * en currSecondsWhite of currSecondsBlack wordt telkens met Ã©Ã©n seconde verlaagd bij elke iteratie.
 	  * Deze methode wordt aangeroepen via de setOutput() methode met de huidige secondes,
 	  * hours wordt berekend van de huidige currSecond en sinds we met Integers werken wordt truncation toegepast.
 	  * 
@@ -405,7 +405,7 @@ public class timerController extends Thread implements Initializable{
 	  * tot 24 uur, 60 minuten en 60 secondes. Met setValue(0) wordt standaard een 0 getoond op de comboBoxen in het hoofdmenu wanneer er nog 
 	  * geen tijd is gekozen.
 	  * In de tweede for loop wordt een TreeMap gemaakt, de Integers waardes worden tot string gemaakt en er wordt een "0" toegevoegd (concatenation)
-	  * aan waardes van 0 tot en met 9. Wanneer we dit niet doen zien we maar één getal telkens als de timer loopt tot dat het de 9 passeert, namelijk ( 9) in plaats van (09).  
+	  * aan waardes van 0 tot en met 9. Wanneer we dit niet doen zien we maar Ã©Ã©n getal telkens als de timer loopt tot dat het de 9 passeert, namelijk ( 9) in plaats van (09).  
 	  * TreeMap wordt gebruikt om de keys en de waardes te ordenen.
 	  */
 	 @Override
